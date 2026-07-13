@@ -1,0 +1,52 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v6
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Preparar sitio estático
+        shell: bash
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          if [ -f "CV_Jesus_Colbert_Reano_CBN_ATS_Final.docx" ]; then
+            cp "CV_Jesus_Colbert_Reano_CBN_ATS_Final.docx" _site/
+          fi
+          if [ -f "robots.txt" ]; then
+            cp robots.txt _site/
+          fi
+          touch _site/.nojekyll
+
+      - name: Subir archivos de GitHub Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Publicar sitio
+        id: deployment
+        uses: actions/deploy-pages@v4

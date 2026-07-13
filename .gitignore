@@ -1,0 +1,9 @@
+# Archivos temporales
+*.zip
+*.tmp
+*.log
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+__pycache__/
