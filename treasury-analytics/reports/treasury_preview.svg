@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690">
+<rect width="1200" height="690" fill="#f3f6fa"/>
+<rect width="1200" height="145" fill="#102a43"/>
+<g font-family="Arial, sans-serif"><text x="52" y="48" font-size="14" letter-spacing="3" fill="#85d5c8">JESUS COLBERT REANO / TREASURY ANALYTICS</text>
+<text x="52" y="96" font-size="35" font-weight="700" fill="white">Cash visibility. Exceptions. Liquidity.</text>
+<text x="52" y="124" font-size="14" fill="#c8d6e5">Independent case study | Synthetic data | As of 2026-11-17</text>
+<rect x="52" y="167" width="348" height="80" rx="7" fill="white"/>
+<text x="72" y="192" font-size="12" fill="#526779">AVAILABLE BANK CASH</text>
+<text x="72" y="226" font-size="28" font-weight="700" fill="#102a43">$205,080.00</text>
+<rect x="426" y="167" width="348" height="80" rx="7" fill="white"/>
+<text x="446" y="192" font-size="12" fill="#526779">RECONCILIATION EXCEPTIONS</text>
+<text x="446" y="226" font-size="28" font-weight="700" fill="#102a43">5</text>
+<rect x="800" y="167" width="348" height="80" rx="7" fill="white"/>
+<text x="820" y="192" font-size="12" fill="#526779">FORECAST HORIZONS</text>
+<text x="820" y="226" font-size="28" font-weight="700" fill="#102a43">13 / 26 weeks</text>
+<line x1="90" y1="540.0" x2="1110" y2="540.0" stroke="#dbe3ec"/>
+<text x="76" y="544.0" text-anchor="end" font-size="12" fill="#62788b">-206k</text>
+<line x1="90" y1="472.5" x2="1110" y2="472.5" stroke="#dbe3ec"/>
+<text x="76" y="476.5" text-anchor="end" font-size="12" fill="#62788b">-89k</text>
+<line x1="90" y1="405.0" x2="1110" y2="405.0" stroke="#dbe3ec"/>
+<text x="76" y="409.0" text-anchor="end" font-size="12" fill="#62788b">28k</text>
+<line x1="90" y1="337.5" x2="1110" y2="337.5" stroke="#dbe3ec"/>
+<text x="76" y="341.5" text-anchor="end" font-size="12" fill="#62788b">145k</text>
+<line x1="90" y1="270.0" x2="1110" y2="270.0" stroke="#dbe3ec"/>
+<text x="76" y="274.0" text-anchor="end" font-size="12" fill="#62788b">262k</text>
+<line x1="90" y1="377.9" x2="1110" y2="377.9" stroke="#8191a0" stroke-dasharray="7 5"/>
+<polyline points="90.0,299.4 130.8,294.2 171.6,287.3 212.4,287.9 253.2,284.4 294.0,368.6 334.8,361.7 375.6,362.3 416.4,358.8 457.2,353.6 498.0,346.7 538.8,347.3 579.6,343.8 620.4,338.6 661.2,331.7 702.0,332.3 742.8,328.8 783.6,358.2 824.4,351.3 865.2,351.9 906.0,348.4 946.8,343.2 987.6,336.3 1028.4,336.9 1069.2,333.4 1110.0,328.2" fill="none" stroke="#008474" stroke-width="3"/>
+<polyline points="90.0,335.2 130.8,337.5 171.6,338.3 212.4,343.0 253.2,344.3 294.0,443.1 334.8,443.8 375.6,448.6 416.4,449.8 457.2,452.1 498.0,452.8 538.8,457.6 579.6,458.9 620.4,461.1 661.2,461.9 702.0,466.6 742.8,467.9 783.6,507.5 824.4,508.3 865.2,513.0 906.0,514.3 946.8,516.6 987.6,517.3 1028.4,522.1 1069.2,523.3 1110.0,525.6" fill="none" stroke="#bc4d37" stroke-width="3"/>
+<text x="90.0" y="568" text-anchor="middle" font-size="12" fill="#526779">W1</text>
+<text x="294.0" y="568" text-anchor="middle" font-size="12" fill="#526779">W6</text>
+<text x="579.6" y="568" text-anchor="middle" font-size="12" fill="#526779">W13</text>
+<text x="783.6" y="568" text-anchor="middle" font-size="12" fill="#526779">W18</text>
+<text x="1110.0" y="568" text-anchor="middle" font-size="12" fill="#526779">W26</text>
+<text x="90" y="601" font-size="14" fill="#008474">Base forecast</text>
+<text x="270" y="601" font-size="14" fill="#bc4d37">Stress forecast</text>
+<text x="470" y="601" font-size="14" fill="#62788b">Dashed line: illustrative $75,000 buffer</text>
+<text x="52" y="650" font-size="13" fill="#526779">Python + SQL | Exact matching with review queue | Fixed illustrative FX | All amounts in USD equivalents</text>
+</g></svg>

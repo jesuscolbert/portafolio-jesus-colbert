@@ -1,0 +1,283 @@
+{
+  "synthetic": true,
+  "as_of": "2026-11-17",
+  "fx_usd_per_unit": {
+    "USD": "1",
+    "EUR": "1.10"
+  },
+  "accounts": [
+    {
+      "id": "US_OPER",
+      "currency": "USD",
+      "opening_bank_cents": 15000000,
+      "opening_ledger_cents": 15000000,
+      "restricted_cents": 1000000
+    },
+    {
+      "id": "EU_OPER",
+      "currency": "EUR",
+      "opening_bank_cents": 5000000,
+      "opening_ledger_cents": 5000000,
+      "restricted_cents": 0
+    }
+  ],
+  "bank": [
+    {
+      "id": "B001",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "COLL001",
+      "amount_cents": 4800000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "B002",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "SUP001",
+      "amount_cents": -3200000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "B003",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "PAYROLL001",
+      "amount_cents": -1500000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "B004",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "BANK_FEE",
+      "amount_cents": -12000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "B005",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "UNIDENTIFIED_RECEIPT",
+      "amount_cents": 700000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "B006",
+      "account": "EU_OPER",
+      "currency": "EUR",
+      "reference": "COLL_EU",
+      "amount_cents": 2000000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "B007",
+      "account": "EU_OPER",
+      "currency": "EUR",
+      "reference": "SUP_EU",
+      "amount_cents": -1800000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "B002",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "SUP001",
+      "amount_cents": -3200000,
+      "date": "2026-11-17"
+    }
+  ],
+  "ledger": [
+    {
+      "id": "L001",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "COLL001",
+      "amount_cents": 4800000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "L002",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "SUP001",
+      "amount_cents": -3200000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "L003",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "PAYROLL001",
+      "amount_cents": -1500000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "L004",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "OUTSTANDING_PAYMENT",
+      "amount_cents": -800000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "L005",
+      "account": "US_OPER",
+      "currency": "USD",
+      "reference": "DEPOSIT_IN_TRANSIT",
+      "amount_cents": 600000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "L006",
+      "account": "EU_OPER",
+      "currency": "EUR",
+      "reference": "COLL_EU",
+      "amount_cents": 2000000,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "L007",
+      "account": "EU_OPER",
+      "currency": "EUR",
+      "reference": "SUP_EU",
+      "amount_cents": -1790000,
+      "date": "2026-11-17"
+    }
+  ],
+  "kiosk_usd_cents": 1800000,
+  "transit_usd_cents": 1200000,
+  "buffer_usd_cents": 7500000,
+  "weekly_schedule": [
+    {
+      "start_date": "2026-11-18",
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2026-11-25",
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2026-12-02",
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2026-12-09",
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000
+    },
+    {
+      "start_date": "2026-12-16",
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2026-12-23",
+      "receipts_cents": 6100000,
+      "payments_cents": 20700000
+    },
+    {
+      "start_date": "2026-12-30",
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-01-06",
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000
+    },
+    {
+      "start_date": "2027-01-13",
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-01-20",
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-01-27",
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-02-03",
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000
+    },
+    {
+      "start_date": "2027-02-10",
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-02-17",
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-02-24",
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-03-03",
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000
+    },
+    {
+      "start_date": "2027-03-10",
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-03-17",
+      "receipts_cents": 6100000,
+      "payments_cents": 11200000
+    },
+    {
+      "start_date": "2027-03-24",
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-03-31",
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000
+    },
+    {
+      "start_date": "2027-04-07",
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-04-14",
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-04-21",
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-04-28",
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000
+    },
+    {
+      "start_date": "2027-05-05",
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000
+    },
+    {
+      "start_date": "2027-05-12",
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000
+    }
+  ]
+}

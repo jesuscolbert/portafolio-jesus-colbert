@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2230">
+  <meta name="description" content="Caso de tesorería de Jesús Colbert Reaño: conciliación bancaria, posición de caja y forecast a 13 y 26 semanas con datos ficticios.">
+  <title>Treasury Analytics · Jesús Colbert Reaño</title>
+  <style>
+    :root { --ink:#102b3a; --deep:#0b2230; --muted:#547080; --line:#dbe8e9; --mint:#50dbc0; --paper:#f7faf8; --orange:#e89967; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 "Segoe UI",Arial,sans-serif; }
+    a { color:inherit; }
+    a:focus-visible, button:focus-visible { outline:3px solid #e89967; outline-offset:3px; }
+    .wrap { width:min(1180px,calc(100% - 48px)); margin:auto; }
+    .top { background:var(--deep); color:white; border-bottom:1px solid #244252; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:82px; }
+    .brand { font-size:.92rem; letter-spacing:.1em; font-weight:800; text-decoration:none; }
+    .brand b { color:var(--mint); }
+    .links { display:flex; align-items:center; flex-wrap:wrap; gap:26px; font-size:.88rem; }
+    .links a { text-decoration:none; color:#d7e6e8; }
+    .links a:hover { color:var(--mint); }
+    .links .back { border:1px solid #59717b; padding:9px 15px; border-radius:100px; }
+    .hero { background:radial-gradient(circle at 80% 25%,#1d4d5b 0,transparent 36%),var(--deep); color:white; overflow:hidden; }
+    .hero-grid { display:grid; grid-template-columns:1fr .88fr; gap:66px; align-items:center; padding:89px 0 103px; }
+    .eyebrow { color:#4ebda9; text-transform:uppercase; font-size:.74rem; font-weight:800; letter-spacing:.17em; }
+    .hero .eyebrow { color:var(--mint); }
+    h1,h2,h3,p { margin-top:0; }
+    h1,h2 { font-family:Georgia,"Times New Roman",serif; font-weight:500; letter-spacing:-.035em; line-height:1.1; }
+    h1 { font-size:clamp(3.3rem,6.3vw,6.2rem); max-width:650px; margin:20px 0 28px; }
+    h1 em { color:var(--mint); font-weight:400; font-style:normal; }
+    .hero-copy { color:#c7d7da; max-width:580px; font-size:1.13rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:48px; border-radius:4px; padding:11px 20px; font-size:.87rem; font-weight:800; letter-spacing:.02em; text-decoration:none; transition:transform .18s,background .18s; }
+    .button:hover { transform:translateY(-2px); }
+    .button.primary { background:var(--mint); color:#092a35; }
+    .button.secondary { color:white; border:1px solid #7c9aa2; }
+    .button.dark { color:white; background:var(--deep); }
+    .terminal { transform:rotate(1.2deg); position:relative; background:#f8fcfa; color:var(--ink); border-radius:13px; box-shadow:0 34px 80px #04162280; overflow:hidden; }
+    .terminal-head { display:flex; align-items:center; justify-content:space-between; background:#d8ecea; padding:13px 21px; font-size:.68rem; font-weight:800; letter-spacing:.13em; }
+    .lights { display:flex; gap:6px; }
+    .lights i { width:7px; height:7px; display:block; border-radius:50%; background:#6aa9a2; }
+    .terminal-inner { padding:28px; }
+    .terminal-label { color:#65808a; font-size:.72rem; font-weight:800; letter-spacing:.14em; }
+    .terminal-value { font-size:clamp(2.5rem,4.5vw,4.4rem); font-weight:800; letter-spacing:-.06em; line-height:1.1; margin:8px 0; }
+    .terminal-unit { color:#5d7881; font-size:.77rem; }
+    .small-rule { border-top:1px solid var(--line); margin:24px 0; }
+    .split-data { display:grid; grid-template-columns:1fr 1fr; gap:17px; }
+    .split-data strong { display:block; font-size:1.5rem; }
+    .split-data span { color:#66808b; font-size:.75rem; }
+    .terminal svg { width:100%; height:auto; margin-top:20px; }
+    .note { display:flex; justify-content:space-between; border-top:1px solid var(--line); color:#70858c; font-size:.69rem; padding-top:13px; }
+    .ribbon { background:#d9f5ed; border-bottom:1px solid #c2e8dc; }
+    .ribbon .wrap { padding:16px 0; display:flex; align-items:center; justify-content:space-between; gap:12px; color:#285353; font-size:.83rem; }
+    section { scroll-margin-top:30px; }
+    .section-pad { padding:110px 0; }
+    h2 { font-size:clamp(2.45rem,4.4vw,4.4rem); max-width:760px; margin:17px 0 25px; }
+    .intro { font-size:1.13rem; color:var(--muted); max-width:720px; }
+    .problem-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:95px; align-items:start; }
+    .question { border-left:3px solid #1f9d88; padding:3px 0 3px 25px; margin-top:45px; font-family:Georgia,serif; font-size:1.65rem; line-height:1.35; }
+    .flow { display:grid; gap:0; border-top:1px solid var(--line); }
+    .flow article { display:grid; grid-template-columns:55px 1fr; gap:22px; padding:24px 0; border-bottom:1px solid var(--line); }
+    .flow .number { color:#198d7d; font-family:Georgia,serif; font-size:1.9rem; line-height:1; }
+    .flow h3 { font-size:1.1rem; margin:0 0 4px; }
+    .flow p { margin:0; color:var(--muted); font-size:.9rem; }
+    .results { background:white; }
+    .result-head { display:flex; align-items:end; justify-content:space-between; gap:25px; margin-bottom:35px; }
+    .result-head h2 { margin-bottom:0; }
+    .switch { display:inline-flex; background:#eaf2f1; border-radius:100px; padding:5px; }
+    .switch button { border:0; background:transparent; color:#496473; border-radius:100px; padding:10px 19px; cursor:pointer; font:800 .83rem "Segoe UI",Arial,sans-serif; }
+    .switch button[aria-selected="true"] { color:white; background:var(--deep); }
+    .result-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+    .result-card { background:#f6faf8; padding:28px; min-height:182px; border:1px solid #e7efec; }
+    .result-card span { display:block; color:#6d8185; font-size:.73rem; text-transform:uppercase; letter-spacing:.1em; font-weight:800; }
+    .result-card strong { display:block; font-size:clamp(1.8rem,2.7vw,2.8rem); letter-spacing:-.05em; line-height:1.2; margin:17px 0 4px; }
+    .result-card p { margin:0; color:var(--muted); font-size:.82rem; }
+    .chart { border:1px solid #e1ebe9; padding:22px 24px 12px; margin-top:15px; }
+    .chart-title { display:flex; justify-content:space-between; gap:20px; color:#516872; font-size:.82rem; padding:0 5px 10px; }
+    .chart img { width:100%; display:block; }
+    .analysis { background:#102b3a; color:white; }
+    .analysis h2 { max-width:720px; }
+    .analysis .intro { color:#b8ced2; }
+    .analysis-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:75px; margin-top:45px; }
+    .exception { display:grid; grid-template-columns:60px 1fr; gap:18px; padding:21px 0; border-top:1px solid #3d5762; }
+    .exception:last-child { border-bottom:1px solid #3d5762; }
+    .exception b { color:var(--mint); font-size:1.4rem; font-family:Georgia,serif; font-weight:400; }
+    .exception h3 { margin:0 0 4px; font-size:1.04rem; }
+    .exception p { color:#b8cdd1; margin:0; font-size:.88rem; }
+    .judgment { padding:28px; align-self:start; background:#1b3b49; border-top:3px solid var(--mint); }
+    .judgment .eyebrow { color:var(--mint); }
+    .judgment h3 { font:400 1.9rem/1.2 Georgia,serif; margin:14px 0; }
+    .judgment p { color:#c2d3d7; font-size:.92rem; }
+    .judgment a { color:var(--mint); font-weight:700; }
+    .method-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+    .method-list { list-style:none; padding:0; margin:0; }
+    .method-list li { padding:18px 0; border-bottom:1px solid var(--line); }
+    .method-list b { display:block; }
+    .method-list span { color:var(--muted); font-size:.88rem; }
+    .method-actions { margin-top:30px; display:flex; gap:15px; flex-wrap:wrap; }
+    footer { background:#08202d; color:white; padding:45px 0; }
+    footer .wrap { display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    footer p { color:#adcad0; margin:0; font-size:.85rem; }
+    footer a { color:var(--mint); }
+    @media (max-width:850px) {
+      .hero-grid,.problem-grid,.analysis-grid,.method-grid { grid-template-columns:1fr; gap:38px; }
+      .hero-grid { padding:65px 0 75px; }
+      .terminal { transform:none; max-width:560px; }
+      .section-pad { padding:75px 0; }
+      .result-grid { grid-template-columns:1fr; }
+      .result-card { min-height:0; }
+      .result-head { display:block; }
+      .switch { margin-top:22px; }
+    }
+    @media (max-width:600px) {
+      .wrap { width:min(100% - 32px,1180px); }
+      .nav { align-items:start; flex-direction:column; padding:18px 0; gap:12px; }
+      .links { gap:16px; }
+      .hero-grid { padding-top:50px; }
+      h1 { font-size:3.25rem; }
+      .ribbon .wrap,footer .wrap { display:block; }
+      .ribbon .wrap span { display:block; margin:4px 0; }
+      .chart { padding:10px; }
+      .chart-title { display:block; }
+      .flow article { grid-template-columns:39px 1fr; }
+      .exception { grid-template-columns:42px 1fr; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body>
+  <div class="top"><nav class="nav wrap" aria-label="Navegación principal"><a class="brand" href="#inicio">JC <b>/</b> TREASURY ANALYTICS</a><div class="links"><a href="#caso">El caso</a><a href="#resultados">Resultados</a><a href="#metodo">Método</a><a class="back" href="https://jesuscolbert.github.io/portafolio-jesus-colbert/">Portafolio principal ↗</a></div></nav></div>
+  <main>
+    <section class="hero" id="inicio"><div class="wrap hero-grid">
+      <div><div class="eyebrow">Jesús Colbert Reaño · Caso de tesorería</div><h1>Hacer visible <em>la liquidez.</em></h1><p class="hero-copy">Una demostración de conciliación bancaria, posición diaria de caja y pronósticos a 13 y 26 semanas. Del movimiento individual a una conversación clara sobre riesgo y decisiones.</p><div class="actions"><a class="button primary" href="#resultados">Explorar resultados <span aria-hidden="true">↘</span></a><a class="button secondary" href="https://github.com/jesuscolbert/portafolio-jesus-colbert/tree/main/treasury-analytics">Ver código en GitHub ↗</a></div></div>
+      <div class="terminal" aria-label="Resumen de posición de caja ficticia"><div class="terminal-head"><span>DAILY CASH POSITION · 17 NOV 2026</span><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="terminal-inner"><div class="terminal-label">EFECTIVO BANCARIO DISPONIBLE</div><div class="terminal-value">$205.080</div><div class="terminal-unit">USD equivalentes · tipo de cambio ilustrativo</div><div class="small-rule"></div><div class="split-data"><div><strong>5</strong><span>grupos de excepción</span></div><div><strong>26</strong><span>semanas proyectadas</span></div></div><svg viewBox="0 0 420 100" role="img" aria-label="Línea de proyección base con caída en la semana seis"><path d="M0 78H420 M0 40H420" stroke="#d9e8e5"/><path d="M0 30 L55 24 L110 22 L155 75 L205 68 L250 66 L310 50 L360 42 L420 30" fill="none" stroke="#00947e" stroke-width="3"/><circle cx="155" cy="75" r="5" fill="#e89967"/></svg><div class="note"><span>ESCENARIO BASE</span><span>MODELO DEMOSTRATIVO</span></div></div></div>
+    </div></section>
+    <div class="ribbon"><div class="wrap"><span>CASO INDEPENDIENTE · DATOS 100 % FICTICIOS</span><span>Python &nbsp;·&nbsp; SQLite &nbsp;·&nbsp; Controles reproducibles</span></div></div>
+    <section class="section-pad" id="caso"><div class="wrap problem-grid"><div><div class="eyebrow">01 / La pregunta</div><h2>De saldos dispersos a una posición confiable.</h2><p class="intro">En una fintech ficticia con cuentas en USD y EUR, separar el efectivo disponible, investigar diferencias y anticipar necesidades de fondos cambia la calidad de la decisión.</p><div class="question">¿Cuánto hay disponible hoy, qué falta conciliar y cuándo aparece una brecha de liquidez?</div></div><div class="flow"><article><div class="number">01</div><div><h3>Ubicar el efectivo</h3><p>Separo banco, fondos restringidos, quioscos y efectivo en tránsito. La conversión EUR/USD utiliza un supuesto fijo declarado.</p></div></article><article><div class="number">02</div><div><h3>Conciliar sin ocultar diferencias</h3><p>Comparo cuenta, moneda, referencia, importe y fecha. Las partidas ambiguas o no coincidentes quedan en una cola de revisión.</p></div></article><article><div class="number">03</div><div><h3>Proyectar y tensionar</h3><p>Un calendario semanal genera las vistas de 13 y 26 semanas. El escenario de estrés retrasa cobros y aumenta pagos.</p></div></article><article><div class="number">04</div><div><h3>Preparar la decisión</h3><p>El reporte muestra la primera brecha frente a un colchón ilustrativo, junto con supuestos y acciones que requieren aprobación.</p></div></article></div></div></section>
+    <section class="section-pad results" id="resultados"><div class="wrap"><div class="eyebrow">02 / Los resultados</div><div class="result-head"><h2>Una lectura rápida.<br>Un rastro verificable.</h2><div class="switch" role="tablist" aria-label="Escenario de liquidez"><button type="button" role="tab" id="base-tab" aria-selected="true" aria-controls="scenario-panel" data-scenario="base">Base</button><button type="button" role="tab" id="stress-tab" aria-selected="false" aria-controls="scenario-panel" data-scenario="stress">Estrés</button></div></div><div id="scenario-panel" role="tabpanel" aria-labelledby="base-tab" tabindex="0"><div class="result-grid"><div class="result-card"><span>Caja bancaria disponible</span><strong>$205.080</strong><p>USD equivalentes al inicio del pronóstico</p></div><div class="result-card"><span>Saldo al cierre · semana 13</span><strong id="week13">$134.080</strong><p id="week13-copy">Escenario base</p></div><div class="result-card"><span>Primera semana bajo el colchón</span><strong id="breach">Ninguna</strong><p>Umbral ilustrativo de USD 75.000</p></div></div><div class="chart"><div class="chart-title"><b>Trayectoria de caja · 26 semanas</b><span>Base y estrés · USD equivalentes</span></div><img src="reports/treasury_preview.svg" alt="Gráfico de pronósticos semanales: escenario base y escenario de estrés, con línea de colchón de liquidez."></div></div></div></section>
+    <section class="section-pad analysis" id="excepciones"><div class="wrap"><div class="eyebrow">03 / Juicio de tesorería</div><h2>Las excepciones son parte del resultado.</h2><p class="intro">El motor encuentra cuatro pares exactos y deja cinco grupos para revisión. Una fila bancaria idéntica importada dos veces se excluye, pero no se borran diferencias reales.</p><div class="analysis-grid"><div><div class="exception"><b>01</b><div><h3>Diferencia de importe</h3><p>El pago registrado en libros y el extracto EUR difieren en EUR 100. Se compara instrucción, factura y aviso bancario.</p></div></div><div class="exception"><b>02</b><div><h3>Ingreso sin identificar</h3><p>USD 7.000 aparecen en banco, pero no en el libro. Deben verificarse su origen y disponibilidad.</p></div></div><div class="exception"><b>03</b><div><h3>Partidas en tránsito</h3><p>Un pago pendiente y un depósito aún no bancarizado exigen revisar fecha de liquidación y soporte.</p></div></div></div><aside class="judgment"><div class="eyebrow">Punto de control</div><h3>Conciliar no significa forzar el saldo a cero.</h3><p>La suma de excepciones explica la diferencia contable del ejemplo. Ningún ajuste se contabiliza de forma automática y la aprobación queda abierta.</p><a href="reports/treasury_review.md">Leer reporte de revisión ↗</a></aside></div></div></section>
+    <section class="section-pad" id="metodo"><div class="wrap method-grid"><div><div class="eyebrow">04 / Transparencia</div><h2>Un caso que se puede volver a ejecutar.</h2><p class="intro">El ejercicio usa cifras en centavos, fuentes ficticias y reglas documentadas. Permite pasar del resultado visual a las entradas, cálculos y pruebas.</p><div class="method-actions"><a class="button dark" href="treasury.py">Abrir código Python ↗</a><a class="button" href="README.md">Leer documentación ↗</a></div></div><div><ul class="method-list"><li><b>Fuente</b><span>Movimientos y calendario ficticios en JSON; sin datos de FRIGOR.</span></li><li><b>Modelo</b><span>Python y SQLite; seguimiento de caja y proyecciones.</span></li><li><b>Controles</b><span>Ocho pruebas de duplicados, saldos, fechas, monedas y continuidad del forecast.</span></li><li><b>Alcance</b><span>Prototipo analítico. La revisión humana precede cualquier asiento o decisión de fondos.</span></li></ul></div></div></section>
+  </main>
+  <footer><div class="wrap"><div><div class="brand">JC <b>/</b> TREASURY ANALYTICS</div><p>Jesús Colbert Reaño · Analista de Planificación Financiera · Bolivia</p></div><div><a href="https://jesuscolbert.github.io/portafolio-jesus-colbert/">Portafolio principal ↗</a> &nbsp; · &nbsp; <a href="https://github.com/jesuscolbert/portafolio-jesus-colbert/tree/main/treasury-analytics">Repositorio ↗</a></div></div></footer>
+  <script>
+    const scenarios = { base:{week13:'$134.080',breach:'Ninguna',copy:'Escenario base'}, stress:{week13:'−$65.460',breach:'Semana 6',copy:'Cobros −10 % y una semana tarde; pagos +8 %'} };
+    const tabs=[...document.querySelectorAll('[data-scenario]')];
+    function selectScenario(name){
+      const data=scenarios[name];
+      document.querySelector('#week13').textContent=data.week13;
+      document.querySelector('#breach').textContent=data.breach;
+      document.querySelector('#week13-copy').textContent=data.copy;
+      for(const tab of tabs) tab.setAttribute('aria-selected',String(tab.dataset.scenario===name));
+      document.querySelector('#scenario-panel').setAttribute('aria-labelledby',name+'-tab');
+    }
+    for(const tab of tabs){
+      tab.addEventListener('click',()=>selectScenario(tab.dataset.scenario));
+      tab.addEventListener('keydown',event=>{
+        if(event.key==='ArrowRight'||event.key==='ArrowLeft'){
+          event.preventDefault();const next=tabs[(tabs.indexOf(tab)+(event.key==='ArrowRight'?1:tabs.length-1))%tabs.length];next.focus();selectScenario(next.dataset.scenario);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

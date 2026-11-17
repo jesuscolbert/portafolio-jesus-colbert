@@ -1,0 +1,689 @@
+{
+  "as_of": "2026-11-17",
+  "synthetic": true,
+  "cash_position": {
+    "accounts": [
+      {
+        "account": "US_OPER",
+        "currency": "USD",
+        "bank_cents": 15788000,
+        "ledger_cents": 14900000,
+        "unreconciled_difference_cents": 888000,
+        "bank_usd_cents": 15788000,
+        "restricted_usd_cents": 1000000,
+        "available_usd_cents": 14788000
+      },
+      {
+        "account": "EU_OPER",
+        "currency": "EUR",
+        "bank_cents": 5200000,
+        "ledger_cents": 5210000,
+        "unreconciled_difference_cents": -10000,
+        "bank_usd_cents": 5720000,
+        "restricted_usd_cents": 0,
+        "available_usd_cents": 5720000
+      }
+    ],
+    "bank_usd_cents": 21508000,
+    "available_usd_cents": 20508000,
+    "restricted_usd_cents": 1000000,
+    "kiosk_usd_cents": 1800000,
+    "transit_usd_cents": 1200000,
+    "operational_cash_usd_cents": 24508000
+  },
+  "reconciliation": {
+    "matched": [
+      {
+        "account": "EU_OPER",
+        "currency": "EUR",
+        "reference": "COLL_EU",
+        "bank_ids": [
+          "B006"
+        ],
+        "ledger_ids": [
+          "L006"
+        ],
+        "bank_cents": 2000000,
+        "ledger_cents": 2000000
+      },
+      {
+        "account": "US_OPER",
+        "currency": "USD",
+        "reference": "COLL001",
+        "bank_ids": [
+          "B001"
+        ],
+        "ledger_ids": [
+          "L001"
+        ],
+        "bank_cents": 4800000,
+        "ledger_cents": 4800000
+      },
+      {
+        "account": "US_OPER",
+        "currency": "USD",
+        "reference": "PAYROLL001",
+        "bank_ids": [
+          "B003"
+        ],
+        "ledger_ids": [
+          "L003"
+        ],
+        "bank_cents": -1500000,
+        "ledger_cents": -1500000
+      },
+      {
+        "account": "US_OPER",
+        "currency": "USD",
+        "reference": "SUP001",
+        "bank_ids": [
+          "B002"
+        ],
+        "ledger_ids": [
+          "L002"
+        ],
+        "bank_cents": -3200000,
+        "ledger_cents": -3200000
+      }
+    ],
+    "exceptions": [
+      {
+        "account": "EU_OPER",
+        "currency": "EUR",
+        "reference": "SUP_EU",
+        "bank_ids": [
+          "B007"
+        ],
+        "ledger_ids": [
+          "L007"
+        ],
+        "bank_cents": -1800000,
+        "ledger_cents": -1790000,
+        "status": "amount_difference",
+        "difference_cents": -10000
+      },
+      {
+        "account": "US_OPER",
+        "currency": "USD",
+        "reference": "BANK_FEE",
+        "bank_ids": [
+          "B004"
+        ],
+        "ledger_ids": [],
+        "bank_cents": -12000,
+        "ledger_cents": 0,
+        "status": "bank_only",
+        "difference_cents": -12000
+      },
+      {
+        "account": "US_OPER",
+        "currency": "USD",
+        "reference": "DEPOSIT_IN_TRANSIT",
+        "bank_ids": [],
+        "ledger_ids": [
+          "L005"
+        ],
+        "bank_cents": 0,
+        "ledger_cents": 600000,
+        "status": "ledger_only",
+        "difference_cents": -600000
+      },
+      {
+        "account": "US_OPER",
+        "currency": "USD",
+        "reference": "OUTSTANDING_PAYMENT",
+        "bank_ids": [],
+        "ledger_ids": [
+          "L004"
+        ],
+        "bank_cents": 0,
+        "ledger_cents": -800000,
+        "status": "ledger_only",
+        "difference_cents": 800000
+      },
+      {
+        "account": "US_OPER",
+        "currency": "USD",
+        "reference": "UNIDENTIFIED_RECEIPT",
+        "bank_ids": [
+          "B005"
+        ],
+        "ledger_ids": [],
+        "bank_cents": 700000,
+        "ledger_cents": 0,
+        "status": "bank_only",
+        "difference_cents": 700000
+      }
+    ],
+    "duplicate_bank_ids": [
+      "B002"
+    ],
+    "duplicate_ledger_ids": [],
+    "unique_bank_rows": 7,
+    "unique_ledger_rows": 7
+  },
+  "forecast_base": [
+    {
+      "week": 1,
+      "start_date": "2026-11-18",
+      "opening_cents": 20508000,
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000,
+      "closing_cents": 21108000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 2,
+      "start_date": "2026-11-25",
+      "opening_cents": 21108000,
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000,
+      "closing_cents": 22008000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 3,
+      "start_date": "2026-12-02",
+      "opening_cents": 22008000,
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000,
+      "closing_cents": 23208000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 4,
+      "start_date": "2026-12-09",
+      "opening_cents": 23208000,
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000,
+      "closing_cents": 23108000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 5,
+      "start_date": "2026-12-16",
+      "opening_cents": 23108000,
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000,
+      "closing_cents": 23708000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 6,
+      "start_date": "2026-12-23",
+      "opening_cents": 23708000,
+      "receipts_cents": 6100000,
+      "payments_cents": 20700000,
+      "closing_cents": 9108000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 7,
+      "start_date": "2026-12-30",
+      "opening_cents": 9108000,
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000,
+      "closing_cents": 10308000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 8,
+      "start_date": "2027-01-06",
+      "opening_cents": 10308000,
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000,
+      "closing_cents": 10208000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 9,
+      "start_date": "2027-01-13",
+      "opening_cents": 10208000,
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000,
+      "closing_cents": 10808000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 10,
+      "start_date": "2027-01-20",
+      "opening_cents": 10808000,
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000,
+      "closing_cents": 11708000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 11,
+      "start_date": "2027-01-27",
+      "opening_cents": 11708000,
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000,
+      "closing_cents": 12908000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 12,
+      "start_date": "2027-02-03",
+      "opening_cents": 12908000,
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000,
+      "closing_cents": 12808000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 13,
+      "start_date": "2027-02-10",
+      "opening_cents": 12808000,
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000,
+      "closing_cents": 13408000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 14,
+      "start_date": "2027-02-17",
+      "opening_cents": 13408000,
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000,
+      "closing_cents": 14308000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 15,
+      "start_date": "2027-02-24",
+      "opening_cents": 14308000,
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000,
+      "closing_cents": 15508000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 16,
+      "start_date": "2027-03-03",
+      "opening_cents": 15508000,
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000,
+      "closing_cents": 15408000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 17,
+      "start_date": "2027-03-10",
+      "opening_cents": 15408000,
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000,
+      "closing_cents": 16008000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 18,
+      "start_date": "2027-03-17",
+      "opening_cents": 16008000,
+      "receipts_cents": 6100000,
+      "payments_cents": 11200000,
+      "closing_cents": 10908000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 19,
+      "start_date": "2027-03-24",
+      "opening_cents": 10908000,
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000,
+      "closing_cents": 12108000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 20,
+      "start_date": "2027-03-31",
+      "opening_cents": 12108000,
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000,
+      "closing_cents": 12008000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 21,
+      "start_date": "2027-04-07",
+      "opening_cents": 12008000,
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000,
+      "closing_cents": 12608000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 22,
+      "start_date": "2027-04-14",
+      "opening_cents": 12608000,
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000,
+      "closing_cents": 13508000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 23,
+      "start_date": "2027-04-21",
+      "opening_cents": 13508000,
+      "receipts_cents": 6400000,
+      "payments_cents": 5200000,
+      "closing_cents": 14708000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 24,
+      "start_date": "2027-04-28",
+      "opening_cents": 14708000,
+      "receipts_cents": 6000000,
+      "payments_cents": 6100000,
+      "closing_cents": 14608000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 25,
+      "start_date": "2027-05-05",
+      "opening_cents": 14608000,
+      "receipts_cents": 5800000,
+      "payments_cents": 5200000,
+      "closing_cents": 15208000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 26,
+      "start_date": "2027-05-12",
+      "opening_cents": 15208000,
+      "receipts_cents": 6100000,
+      "payments_cents": 5200000,
+      "closing_cents": 16108000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    }
+  ],
+  "forecast_stress": [
+    {
+      "week": 1,
+      "start_date": "2026-11-18",
+      "opening_cents": 20508000,
+      "receipts_cents": 0,
+      "payments_cents": 5616000,
+      "closing_cents": 14892000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 2,
+      "start_date": "2026-11-25",
+      "opening_cents": 14892000,
+      "receipts_cents": 5220000,
+      "payments_cents": 5616000,
+      "closing_cents": 14496000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 3,
+      "start_date": "2026-12-02",
+      "opening_cents": 14496000,
+      "receipts_cents": 5490000,
+      "payments_cents": 5616000,
+      "closing_cents": 14370000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 4,
+      "start_date": "2026-12-09",
+      "opening_cents": 14370000,
+      "receipts_cents": 5760000,
+      "payments_cents": 6588000,
+      "closing_cents": 13542000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 5,
+      "start_date": "2026-12-16",
+      "opening_cents": 13542000,
+      "receipts_cents": 5400000,
+      "payments_cents": 5616000,
+      "closing_cents": 13326000,
+      "buffer_gap_cents": 0,
+      "below_buffer": false
+    },
+    {
+      "week": 6,
+      "start_date": "2026-12-23",
+      "opening_cents": 13326000,
+      "receipts_cents": 5220000,
+      "payments_cents": 22356000,
+      "closing_cents": -3810000,
+      "buffer_gap_cents": 11310000,
+      "below_buffer": true
+    },
+    {
+      "week": 7,
+      "start_date": "2026-12-30",
+      "opening_cents": -3810000,
+      "receipts_cents": 5490000,
+      "payments_cents": 5616000,
+      "closing_cents": -3936000,
+      "buffer_gap_cents": 11436000,
+      "below_buffer": true
+    },
+    {
+      "week": 8,
+      "start_date": "2027-01-06",
+      "opening_cents": -3936000,
+      "receipts_cents": 5760000,
+      "payments_cents": 6588000,
+      "closing_cents": -4764000,
+      "buffer_gap_cents": 12264000,
+      "below_buffer": true
+    },
+    {
+      "week": 9,
+      "start_date": "2027-01-13",
+      "opening_cents": -4764000,
+      "receipts_cents": 5400000,
+      "payments_cents": 5616000,
+      "closing_cents": -4980000,
+      "buffer_gap_cents": 12480000,
+      "below_buffer": true
+    },
+    {
+      "week": 10,
+      "start_date": "2027-01-20",
+      "opening_cents": -4980000,
+      "receipts_cents": 5220000,
+      "payments_cents": 5616000,
+      "closing_cents": -5376000,
+      "buffer_gap_cents": 12876000,
+      "below_buffer": true
+    },
+    {
+      "week": 11,
+      "start_date": "2027-01-27",
+      "opening_cents": -5376000,
+      "receipts_cents": 5490000,
+      "payments_cents": 5616000,
+      "closing_cents": -5502000,
+      "buffer_gap_cents": 13002000,
+      "below_buffer": true
+    },
+    {
+      "week": 12,
+      "start_date": "2027-02-03",
+      "opening_cents": -5502000,
+      "receipts_cents": 5760000,
+      "payments_cents": 6588000,
+      "closing_cents": -6330000,
+      "buffer_gap_cents": 13830000,
+      "below_buffer": true
+    },
+    {
+      "week": 13,
+      "start_date": "2027-02-10",
+      "opening_cents": -6330000,
+      "receipts_cents": 5400000,
+      "payments_cents": 5616000,
+      "closing_cents": -6546000,
+      "buffer_gap_cents": 14046000,
+      "below_buffer": true
+    },
+    {
+      "week": 14,
+      "start_date": "2027-02-17",
+      "opening_cents": -6546000,
+      "receipts_cents": 5220000,
+      "payments_cents": 5616000,
+      "closing_cents": -6942000,
+      "buffer_gap_cents": 14442000,
+      "below_buffer": true
+    },
+    {
+      "week": 15,
+      "start_date": "2027-02-24",
+      "opening_cents": -6942000,
+      "receipts_cents": 5490000,
+      "payments_cents": 5616000,
+      "closing_cents": -7068000,
+      "buffer_gap_cents": 14568000,
+      "below_buffer": true
+    },
+    {
+      "week": 16,
+      "start_date": "2027-03-03",
+      "opening_cents": -7068000,
+      "receipts_cents": 5760000,
+      "payments_cents": 6588000,
+      "closing_cents": -7896000,
+      "buffer_gap_cents": 15396000,
+      "below_buffer": true
+    },
+    {
+      "week": 17,
+      "start_date": "2027-03-10",
+      "opening_cents": -7896000,
+      "receipts_cents": 5400000,
+      "payments_cents": 5616000,
+      "closing_cents": -8112000,
+      "buffer_gap_cents": 15612000,
+      "below_buffer": true
+    },
+    {
+      "week": 18,
+      "start_date": "2027-03-17",
+      "opening_cents": -8112000,
+      "receipts_cents": 5220000,
+      "payments_cents": 12096000,
+      "closing_cents": -14988000,
+      "buffer_gap_cents": 22488000,
+      "below_buffer": true
+    },
+    {
+      "week": 19,
+      "start_date": "2027-03-24",
+      "opening_cents": -14988000,
+      "receipts_cents": 5490000,
+      "payments_cents": 5616000,
+      "closing_cents": -15114000,
+      "buffer_gap_cents": 22614000,
+      "below_buffer": true
+    },
+    {
+      "week": 20,
+      "start_date": "2027-03-31",
+      "opening_cents": -15114000,
+      "receipts_cents": 5760000,
+      "payments_cents": 6588000,
+      "closing_cents": -15942000,
+      "buffer_gap_cents": 23442000,
+      "below_buffer": true
+    },
+    {
+      "week": 21,
+      "start_date": "2027-04-07",
+      "opening_cents": -15942000,
+      "receipts_cents": 5400000,
+      "payments_cents": 5616000,
+      "closing_cents": -16158000,
+      "buffer_gap_cents": 23658000,
+      "below_buffer": true
+    },
+    {
+      "week": 22,
+      "start_date": "2027-04-14",
+      "opening_cents": -16158000,
+      "receipts_cents": 5220000,
+      "payments_cents": 5616000,
+      "closing_cents": -16554000,
+      "buffer_gap_cents": 24054000,
+      "below_buffer": true
+    },
+    {
+      "week": 23,
+      "start_date": "2027-04-21",
+      "opening_cents": -16554000,
+      "receipts_cents": 5490000,
+      "payments_cents": 5616000,
+      "closing_cents": -16680000,
+      "buffer_gap_cents": 24180000,
+      "below_buffer": true
+    },
+    {
+      "week": 24,
+      "start_date": "2027-04-28",
+      "opening_cents": -16680000,
+      "receipts_cents": 5760000,
+      "payments_cents": 6588000,
+      "closing_cents": -17508000,
+      "buffer_gap_cents": 25008000,
+      "below_buffer": true
+    },
+    {
+      "week": 25,
+      "start_date": "2027-05-05",
+      "opening_cents": -17508000,
+      "receipts_cents": 5400000,
+      "payments_cents": 5616000,
+      "closing_cents": -17724000,
+      "buffer_gap_cents": 25224000,
+      "below_buffer": true
+    },
+    {
+      "week": 26,
+      "start_date": "2027-05-12",
+      "opening_cents": -17724000,
+      "receipts_cents": 5220000,
+      "payments_cents": 5616000,
+      "closing_cents": -18120000,
+      "buffer_gap_cents": 25620000,
+      "below_buffer": true
+    }
+  ]
+}

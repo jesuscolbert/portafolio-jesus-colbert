@@ -2,6 +2,10 @@
 
 Portafolio de planificación financiera, analítica comercial, automatización y Business Intelligence.
 
+## Caso de tesorería
+
+[Abrir la landing page de Treasury Analytics](https://jesuscolbert.github.io/portafolio-jesus-colbert/treasury-analytics/) — conciliación bancaria, posición diaria de caja y forecast a 13 y 26 semanas con datos ficticios. [Ver código y controles](treasury-analytics/).
+
 ## Contacto
 
 - Correo: [jesusgolberg456@gmail.com](mailto:jesusgolberg456@gmail.com)
